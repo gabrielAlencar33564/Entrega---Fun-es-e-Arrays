@@ -1,21 +1,25 @@
 function position(firstPlace, secondPlace, lastPlace) {
+    let posicao = [firstPlace, secondPlace, lastPlace]
 
-    if (lastPlace == 'Daniel') {
-        secondPlace = lastPlace
-        lastPlace = 'Manoel'
-    }
-    if (secondPlace == 'Daniel') {
-        firstPlace = secondPlace
-        secondPlace = 'Rafael'
+    if (lastPlace == 'daniel') {
+        secondPlace = posicao[2]
+        lastPlace = posicao[1]
+        firstPlace = posicao[2]
+        secondPlace = posicao[0]
+
+    } else if(secondPlace == 'daniel'){
+        firstPlace = posicao[1]
+        secondPlace = posicao[0]
+        
+    }else{
+        firstPlace = posicao[0]
     }
 
-    let novaPosicao = [firstPlace, secondPlace, lastPlace]
-    if (firstPlace == 'Daniel') {
-        return `
-        1ª - Colocado ${novaPosicao[0]}
-        2ª - Colocado ${novaPosicao[1]}
-        3ª - Colocado ${novaPosicao[2]}
-        `
-    }
+    return `
+    1ª - Colocado ${firstPlace}
+    2ª - Colocado ${secondPlace}
+    3ª - Colocado ${lastPlace}
+    `
+
 }
-console.log(position('Rafael', 'Manuel', 'Daniel'))
+console.log(position('rafa', 'daniel', 'manoel'))
