@@ -1,20 +1,21 @@
 function position(firstPlace, secondPlace, lastPlace) {
-    let novaPosicao = [firstPlace, secondPlace, lastPlace]
-    if(lastPlace == 'Daniel'){
+
+    if (lastPlace == 'Daniel') {
         secondPlace = lastPlace
         lastPlace = 'Manoel'
     }
-    if(secondPlace == 'Daniel'){
+    if (secondPlace == 'Daniel') {
         firstPlace = secondPlace
         secondPlace = 'Rafael'
     }
-    console.log(lastPlace)
-    console.log(secondPlace)
-    console.log(firstPlace)
-    return ` 
-    1ª - Colocado ${firstPlace}
-    2ª - Colocado ${secondPlace}
-    3ª - Colocado ${lastPlace}
-    `
+
+    let novaPosicao = [firstPlace, secondPlace, lastPlace]
+    if (firstPlace == 'Daniel') {
+        return `
+        1ª - Colocado ${novaPosicao[0]}
+        2ª - Colocado ${novaPosicao[1]}
+        3ª - Colocado ${novaPosicao[2]}
+        `
+    }
 }
 console.log(position('Rafael', 'Manuel', 'Daniel'))
